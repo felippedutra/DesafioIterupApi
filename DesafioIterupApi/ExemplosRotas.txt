@@ -1,0 +1,111 @@
+********************************************************Códigos de exemplo rotas API**********************************************************************
+**********************************************************************************************************************************************************
+
+*Etapa*
+
+*GetEtapas*
+curl --request GET \
+  --url https://localhost:44302/api/Etapa/GetEtapas \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+
+*GetEtapa*
+curl --request GET \
+  --url https://localhost:44302/api/Etapa/GetEtapa/1 \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+
+*CreateEtapa*
+curl --request POST \
+  --url https://localhost:44302/api/Etapa/CreateEtapa \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c' \
+  --header 'Content-Type: application/json' \
+  --data '			{
+				"etapaId": 4,
+				"texto": "Nova etapa para teste",
+				"tipoEtapaId": 1
+			}'
+
+*EditEtapa*
+curl --request PUT \
+  --url https://localhost:44302/api/Etapa/EditEtapa \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c' \
+  --header 'Content-Type: application/json' \
+  --data '			{
+				"etapaId": 2,
+				"texto": "Edicao de estapa para teste",
+				"tipoEtapaId": 1
+			}'
+
+*DeleteEtapa*
+curl --request DELETE \
+  --url https://localhost:44302/api/Etapa/DeleteEtapa/3 \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+
+*EtapasRespostas*
+curl --request GET \
+  --url https://localhost:44302/api/Etapa/EtapasRespostas \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+
+
+**********************************************************************************************************************************************************
+
+
+*Resposta*
+
+*GetRespostas*
+curl --request GET \
+  --url https://localhost:44302/api/Resposta/GetRespostas \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+  
+*GetResposta*
+curl --request GET \
+  --url https://localhost:44302/api/Resposta/GetResposta/1/1 \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+
+*CreateResposta*
+curl --request POST \
+  --url https://localhost:44302/api/Resposta/CreateResposta \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c' \
+  --header 'Content-Type: application/json' \
+  --data '			{
+				"respostaId": 2,
+				"etapaId": 3,
+				"legenda": "Nova resposta para Teste",
+				"proxEtapaId": 1
+			}'
+
+*EditResposta*
+curl --request PUT \
+  --url https://localhost:44302/api/Resposta/EditResposta \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c' \
+  --header 'Content-Type: application/json' \
+  --data '			{
+				"respostaId": 1,
+				"etapaId": 2,
+				"legenda": "Alteracao de etapa para teste",
+				"proxEtapaId": 3
+			}'
+
+*DeleteResposta*
+curl --request DELETE \
+  --url https://localhost:44302/api/Resposta/DeleteResposta/1/2 \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+
+*RespostasByEtapaId*
+curl --request GET \
+  --url https://localhost:44302/api/Resposta/RespostasByEtapaId/2 \
+  --header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJleHAiOjE2NDQyOTAwNDcsImlzcyI6IkRlc2FmaW9JdGVydXBBcGkiLCJhdWQiOiJEZXNhZmlvSXRlcnVwQXBpIn0.d6cDyZ2yfoqL6JohSbme0NKUkYrWyXIdC4S0wjO9v6c'
+  
+  
+**********************************************************************************************************************************************************
+  
+  
+*Token*
+
+*Token*
+curl --request POST \
+  --url https://localhost:44302/api/Token \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"Email": "teste@teste.com",
+	"Senha": "123"
+}'
